@@ -1,5 +1,3 @@
-# Empirical-Evaluation-of-a-Layered-Edge-Cloud-IoT-Security-Architecture
-Empirical Evaluation of a Layered Edge–Cloud IoT Security Architecture for Resilient Residential Access Control.
 # Empirical Evaluation of a Layered Edge–Cloud IoT Security Architecture for Resilient Residential Access Control
 
 This repository contains the source code, firmware, configuration schemas, and replication instructions for the stratified edge-cloud IoT security framework designed for robust residential access control.
@@ -24,3 +22,12 @@ Traditional smart lock systems frequently experience slowness and susceptibility
 │   └── MQTT_Payload_Schema.json     # JSON payload structure for cloud synchronization
 ├── LICENSE                          # OSI-approved MIT License
 └── README.md                        # Project documentation
+Hardware Architecture & Setup
+The decentralized edge architecture is built on an ESP32 microcontroller, paired with an MFRC522 RFID module (13.56 MHz), a biometric fingerprint sensor, and a 12V Solenoid electromagnetic lock linked via a logic-level MOSFET switch.
+
+Communication with the centralized cloud monitoring dashboard runs over MQTT utilizing its Last Will and Testament (LWT) feature for node health checks.
+
+Citation
+If you use this software or data in an academic context, please cite it as:
+
+Jama, Y. A., Muse, K. W., & Ali, R. M. (2026). Underlying and Extended Data for: Empirical Evaluation of a Layered Edge–Cloud IoT Security Architecture for Resilient Residential Access Control. Zenodo. https://doi.org/10.5281/zenodo.19696536
