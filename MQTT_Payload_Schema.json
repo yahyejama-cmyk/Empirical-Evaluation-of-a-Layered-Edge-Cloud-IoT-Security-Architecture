@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MQTT_Payload_Schema",
+  "description": "JSON payload schema used for structural edge-to-cloud telemetry sync during authentication events.",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string",
+      "description": "Anonymized internal hash representation of the RFID card UID or biometric template."
+    },
+    "method": {
+      "type": "string",
+      "enum": ["RFID", "Biometric", "DualFactor"]
+    },
+    "latency": {
+      "type": "integer",
+      "description": "Local computational matching speed measured in milliseconds."
+    },
+    "result": {
+      "type": "string",
+      "enum": ["Success", "Failed"]
+    },
+    "syncStatus": {
+      "type": "string",
+      "enum": ["RealTime", "Buffered"],
+      "default": "RealTime"
+    }
+  },
+  "required": ["userId", "method", "latency", "result"]
+}
